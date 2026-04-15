@@ -18,3 +18,4 @@
 ○ Compiling / ...
  GET / 200 in 6.3s (next.js: 5.6s, proxy.ts: 55ms, application-code: 654ms)
  GET / 200 in 50ms (next.js: 4ms, proxy.ts: 8ms, application-code: 38ms)
+ GET / 200 in 331ms (next.js: 66ms, proxy.ts: 104ms, application-code: 160ms)

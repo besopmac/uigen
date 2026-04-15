@@ -24,6 +24,9 @@ jobs:
       issues: write
       id-token: write
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Project Setup
         run: |
           npm run setup
@@ -31,7 +34,7 @@ jobs:
 
       - name: Run Claude Code Action
         id: claude
-        uses: anthropics/claude-code-action@beta
+        uses: anthropic/claude-code-action@beta
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
 
@@ -55,4 +58,4 @@ jobs:
               }
             }
 
-          allowed_tools: "Bash(npm:*),Bash(sqlite3:*),mcp__playwright__browser_snapshot,mcp__playwright__browser_click,..."
+          allowed_tools: "Bash(npm:*),Bash(sqlite3:*),mcp__playwright__browser_snapshot,mcp__playwright__browser_click"
